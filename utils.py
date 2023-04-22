@@ -33,8 +33,33 @@ data_science_students = [
     "Braulio Valdés",
 ]
 
-def random_student():
-    return random.choice(data_science_students)
+def random_student()-> str:
+    """"
+    Seleccionar un estudiante al azar de la lista de estudiantes
+    de data science.
 
-def n_random_students(n_students):
-    return random.sample(data_science_students, n_students)
+    RETURNS
+    name: Nombre del estudiante seleccionado
+    """
+
+    name = random.choice(data_science_students)
+
+    return name
+
+def n_random_students(n_students: int) -> list:
+    """
+    Seleccionar n estudiantes al azar de la lista de estudiantes
+    de data science.
+
+    INPUT
+    n_students: Cantidad de estudiantes a seleccionar
+
+    RETURNS
+
+    students: Lista con los nombres de los estudiantes seleccionados
+    """
+
+    students = random.sample(data_science_students, n_students)
+
+
+    return students
